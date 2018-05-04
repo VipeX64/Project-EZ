@@ -2,27 +2,38 @@
     width: 1200px;
     height: 600px;
     border: 5px double black;
+    background: linear-gradient(rgb(89, 162, 207), rgb(26, 99, 145));
 }
 nav{
     background-color:#2471A3;
     width: 100%;
     height: 100px;
+    border-bottom: 5px double black;
 }
 nav div{
     border: 2px solid gray;
     float: left;
     width: 170px;
     height: 70px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 40px;
     text-align: center;
     line-height: 70px;
     margin: 8px;
-    margin-left:10px;
+    margin-left:15px;
     margin-right: 10px;
     background-color: #AEB6BF;
     color: #2C3E50;
     font-weight: 700;
+    cursor: pointer;
+    user-select: none;
+    transform: skewX(8deg);
+}
+nav div:hover{
+    background: linear-gradient(135deg, rgb(156, 166, 177) 70%, rgb(64, 81, 97));
+}
+nav div:active{
+    background: linear-gradient(315deg, rgb(156, 166, 177)30%, rgb(64, 81, 97)) 
 }
 #quizSection{
     height: 450px;
@@ -46,4 +57,30 @@ h3{
     margin: 0 10%;
     text-transform: none;
 
+}
+.modal{
+    position: fixed;
+    width: 1100px;
+    height: 500px;
+    background-color: rgba(177, 177, 177, 0.925);
+    top: 50px;
+    left: 50px;
+    border: double 4px rgb(29, 27, 27)
+}
+h4{
+    font-size: 50px;
+    text-align: center;
+}
+#moreInfo{
+    font-size: 35px;
+    text-align: center;
+    
+}
+#next{
+    width: 350px;
+    height: 60px;
+    font-size: 40px;
+    position: absolute;
+    top: 80%;
+    left: 30%
 }
