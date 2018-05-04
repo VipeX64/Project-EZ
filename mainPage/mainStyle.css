@@ -1,0 +1,33 @@
+body{
+    color: #2F7E92;
+}
+#adPlace{
+    height: 90px;
+    background-color: gray;
+}
+.navbar{
+    margin-top: 1em;
+    color:#2F7E92;
+    font-family: comfortaa;
+    font-size: 20px;
+    text-align: center;
+}
+.navbar div:nth-child(3){
+    border: none;
+}
+#logo{
+    background-image: url(../packages/img/logo.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    height: 30em;
+    top: 6em;
+    background-position-y: -19em;
+    background-position-x: 8em;
+    z-index: 10;
+    position: absolute;
+    width: 95%;
+}
+.navbar div{
+    height: 58px;
+    border: 1px solid black;
+}
