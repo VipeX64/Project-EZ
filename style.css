@@ -65,7 +65,8 @@ h3{
     background-color: rgba(177, 177, 177, 0.925);
     top: 50px;
     left: 50px;
-    border: double 4px rgb(29, 27, 27)
+    border: double 4px rgb(29, 27, 27);
+    display: none;
 }
 h4{
     font-size: 50px;
