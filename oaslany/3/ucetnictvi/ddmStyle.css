@@ -1,5 +1,5 @@
 #mainCircuit{
-    background-image: url(../../../packages/img/black.jpg);
+    background-image: url(../../../packages/img/black1.jpg);
     background-size: contain;
     height: 1000px;
     color: #e6e6e6;
@@ -8,21 +8,26 @@ body{
     overflow-x: hidden;
     overflow-y: hidden;
 }
+#header .iconBox{ 
+    position: static;
+}
 #back,#options{
     width: 5em;
     height: 5em;
     color: #e6e6e6;
     font-family: comfortaa;
-    margin-top: 1em; 
+    margin-top: 1em;
 }
 #options{
-    border: 4px solid #e6e6e6;
+    padding: 8px;
+    border: 6px solid #e6e6e6;
 }
 #theme{
     font-size: 4em;
     text-align: center;
     font-family: comfortaa;
     margin-top: 1%; 
+    position: static;
 }
 #qH3{
     padding: 5px;
@@ -43,4 +48,118 @@ body{
 .modal-body{
     color: black;
     font-family: comfortaa;
+}
+#loadingScreen{
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    background-color: black;
+}
+.progress{
+    background-color: transparent;
+}
+#progressBar{
+    transform: rotate(180deg);
+}
+#loader{
+    margin: 25%;
+    text-align: center;
+}
+#loader p{
+    font-family: comfortaa;
+    font-size: 2em;
+    color: snow;
+}
+#constantScreen{
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: #333333;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    z-index: -1;
+}
+#questionHere{
+    height: 200px;
+}
+#end{
+    display: none; 
+    padding-top: 1em;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    z-index: 1;
+    background-color: rgba(64, 64, 64, 0.9);
+    height: 450px;
+    font-family: comfortaa;
+    font-size: 2.5em;
+    color: whitesmoke;
+    line-height: 3em;
+    text-align: right;
+
+}
+#endFade{
+    display: none;
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }

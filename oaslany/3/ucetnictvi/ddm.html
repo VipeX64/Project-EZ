@@ -13,21 +13,47 @@
 </head>
 
 <body>
+
+    <div id="endFade"></div>
+    <div id="loadingScreen" class="container">
+        <div id="loader">
+            <p>Načítá se..</p>
+            <div class="progress">
+                <div id="progressBar" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" style="width:100%"></div>
+            </div>
+        </div>
+    </div>
+    <div id="constantScreen"></div>
+    <div id="end">
+        <div class="container">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <p>Dobrá práce! You're really fucking worthless</p>
+                <p>NO je to tak.. you bloody bloody fucking basstard master</p>
+            </div>
+            <div class="col-md-1"></div>
+
+        </div>
+    </div>
+    <div id="endFade"></div>
     <div id="mainCircuit">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-1">
+            <div id="header" class="row">
+                <div class="col-md-1 iconBox">
                     <i id="back" class="far fa-caret-square-left icons"></i>
                 </div>
-                <div class="col-md-10" id="theme">Otázky z tématu: Dlouhodobý majetek</div>
-                <div class="col-md-1">
+                <div class="col-md-10" id="theme">Otázky z tématu:
+                    <br>
+                </div>
+                <div class="col-md-1 iconBox">
                     <i id="options" class="fas fa-bars icons" data-toggle="modal" data-target="#verdict"></i>
                 </div>
             </div>
             <div class="container">
                 <div id="quizSection">
-                    <div>
+                    <div id="questionHere">
                         <h3 id="qH3">QUESTION HERE</h3>
+                        <h5 id="qH5">Otázka č.</h5><h5 id="qNum"></h5>
                     </div>
                     <div>
                         <button class="yesOrNo" onclick="correct()">ANO</button>
@@ -35,15 +61,32 @@
                     </div>
                     <div id="verdict" class="modal fade" role="dialog">
                         <div class="modal-dialog">
+                            <!-- OPTIONS menu -->
                             <div class="modal-content">
                                 <div class="modal-body">
-                                    <p>Rychlý chod?&nbsp;&nbsp;<input id="modalOn" type="checkbox"></p>
+                                    <p>Rychlý chod?&nbsp;&nbsp;
+                                        <label class="switch">
+                                            <input type="checkbox" id="quickMode">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </p>
                                     <p id="totalQuestions">Celkový počet otázek: </p>
                                     <p id="perCorrect">Procento správných odpovědí: </p>
                                     <p id="exitGame">Odhlásit se a zavřít okno</p>
+
                                 </div>
                             </div>
                         </div>
+                        <!-- OPTIONS menu -->
+                        <!-- verdict menu -->
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <!-- verdikt  + co se napíše po kliknutí butttonu -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- verdict menu -->
                     </div>
                 </div>
             </div>
