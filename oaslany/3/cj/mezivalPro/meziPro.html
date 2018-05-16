@@ -59,26 +59,26 @@
                     <div id="fourBtns">
                         <div id="firstTwo">
                             <div class="col-md-6">
-                                <button id="a" class="yesOrNo" onclick="a()">Možnost A</button>
+                                <button id="a" class="yesOrNo" onclick="renderAns(a)">Možnost A</button>
                             </div>
                             <div class="col-md-6">
-                                <button id="b" class="yesOrNo" onclick="b()">Možnost B</button>
+                                <button id="b" class="yesOrNo" onclick="renderAns(b)">Možnost B</button>
                             </div>
 
 
                         </div>
                         <div id="secondTwo">
                             <div class="col-md-6">
-                                <button id="c" class="yesOrNo" onclick="c()">Možnost C</button>
+                                <button id="c" class="yesOrNo" onclick="renderAns(c)">Možnost C</button>
                             </div>
                             <div class="col-md-6">
-                                <button id="d" class="yesOrNo" onclick="d()">Možnost D</button>
+                                <button id="d" class="yesOrNo" onclick="renderAns(d)">Možnost D</button>
                             </div>
 
 
                         </div>
                     </div>
-
+                    <div id="next" onclick="next()">DALŠÍ <i class="fas fa-arrow-circle-right"></i></div>
                     <div id="verdict" class="modal fade" role="dialog">
                         <div class="modal-dialog">
                             <!-- OPTIONS menu -->
@@ -115,6 +115,7 @@
     </div>
     <script src="../../../../packages/bootstrap/js/bootstrap.min.js"></script>
     <script src="meziPro.js"></script>
+    <script src="../../../../packages/script/global.js"></script>
 </body>
 
 </html>

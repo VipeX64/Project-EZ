@@ -31,6 +31,7 @@ body{
 }
 #qH3{
     padding: 5px;
+    padding-top: 30px;
     border-bottom: 1px double #e6e6e6;
     font-family: comfortaa;
 }
@@ -46,6 +47,7 @@ body{
     font-size: 2em;
     font-family: comfortaa;
     font-weight: 900;
+    text-shadow: black 2px 0px;
 }
 .modal-body{
     color: black;
@@ -106,7 +108,17 @@ body{
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
 }
-
+#next{
+    width: 6em;
+    height: 2em;
+    float: right;
+    margin-top: 25px;
+    font-size: 3em;
+    line-height: 2em;
+    text-align: center;
+    font-family: comfortaa;
+    display: none;
+}
 /* The switch - the box around the slider */
 .switch {
   position: relative;
