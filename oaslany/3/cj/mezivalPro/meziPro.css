@@ -36,14 +36,16 @@ body{
 }
 .yesOrNo{
     background-image: url(../../../../packages/img/button.jpg);
-    width: 45%;
-    margin: 5% 1.5%;
+    width: 100%;
+    margin: 4% 1.5%;
+    margin-bottom: 2.5%;
     height: 100px;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position-y: center;
-    font-size: 5em;
+    font-size: 2em;
     font-family: comfortaa;
+    font-weight: 900;
 }
 .modal-body{
     color: black;

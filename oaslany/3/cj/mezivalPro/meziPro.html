@@ -53,13 +53,32 @@
                 <div id="quizSection">
                     <div id="questionHere">
                         <h3 id="qH3">QUESTION HERE</h3>
-                        <h5 id="qH5">Otázka č.</h5>
-                        <h5 id="qNum"></h5>
+                        <!-- <h5 id="qH5">Otázka č.</h5>
+                        <h5 id="qNum"></h5> -->
                     </div>
-                    <div>
-                        <button class="yesOrNo" onclick="correct()">ANO</button>
-                        <button class="yesOrNo" onclick="incorrect()">NE</button>
+                    <div id="fourBtns">
+                        <div id="firstTwo">
+                            <div class="col-md-6">
+                                <button id="a" class="yesOrNo" onclick="a()">Možnost A</button>
+                            </div>
+                            <div class="col-md-6">
+                                <button id="b" class="yesOrNo" onclick="b()">Možnost B</button>
+                            </div>
+
+
+                        </div>
+                        <div id="secondTwo">
+                            <div class="col-md-6">
+                                <button id="c" class="yesOrNo" onclick="c()">Možnost C</button>
+                            </div>
+                            <div class="col-md-6">
+                                <button id="d" class="yesOrNo" onclick="d()">Možnost D</button>
+                            </div>
+
+
+                        </div>
                     </div>
+
                     <div id="verdict" class="modal fade" role="dialog">
                         <div class="modal-dialog">
                             <!-- OPTIONS menu -->
