@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="../../../../../packages/bootstrap/js/jquery-3.2.1.min.js"></script>
+    <script defer src="../../../../../packages/fontawesome/svg-with-js/js/fontawesome-all.js"></script>
+    <meta charset="UTF-8">
+    <title>Meziválečná próza</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link rel="stylesheet" href="addData.css">
+    <link rel="stylesheet" href="../../../../../packages/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../../packages\fontawesome\web-fonts-with-css\css\fontawesome.min.css">
+</head>
+
+<body>
+
+    <div id="endFade"></div>
+    <div id="loadingScreen" class="container">
+        <div id="loader">
+            <p>Načítá se..</p>
+            <div class="progress">
+                <div id="progressBar" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" style="width:100%"></div>
+            </div>
+        </div>
+    </div>
+    <div id="constantScreen"></div>
+    <div id="end">
+        <div class="container">
+
+        </div>
+    </div>
+    <div id="endFade"></div>
+    <div id="darken"></div>
+    <div id="mainCircuit">
+        <div class="container-fluid">
+            <div id="header">
+                <div class="col-md-3 col-sm-12" id="logo"></div>
+                <div class="col-md-9 col-sm-12" id="whiteSpace"></div>
+            </div>
+            <div class="col-sm-12 container">
+
+                <div id="modalForm">
+                    <form action="getData.php" method="post">
+                        <div class="form-group">
+                            <label for="questionInput" id="questionLabel">Otázka na téma:</br>
+                            </label>
+                            <input class="form-control" id="questionInput" placeholder="...otázka">
+                        </div>
+                        <div class="form-group">
+                            <label for="answerA" id="labelA">Odpověď A:</label>
+                            <input type="text" class="form-control" id="answerA" placeholder="..odpověď">
+                            <!-- vstup pro odpověď A -->
+
+                            <label for="answerB" id="labelB">Odpověď B:</label>
+                            <input type="text" class="form-control" id="answerB" placeholder="..odpověď">
+                            <!-- vstup pro odpověď B -->
+
+                            <label for="answerC" id="labelC">Odpověď C:</label>
+                            <input type="text" class="form-control" id="answerC" placeholder="..odpověď">
+                            <!-- vstup pro odpověď C -->
+
+                            <label for="answerD" id="labelD">Odpověď D:</label>
+                            <input type="text" class="form-control" id="answerD" placeholder="..odpověď">
+                            <!-- vstup pro odpověď D -->
+
+                            <label for="correctRank" id="labelRank">Kolikátá otázka je správná?</label>
+                            <select class="form-control" id="correctRank">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+
+                            <button type="submit" class="btn btn-default">Poslat návrh</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <script src="../../../../../packages/bootstrap/js/bootstrap.min.js"></script>
+    <script src="addData.js"></script>
+</body>
+
+</html>

@@ -23,7 +23,6 @@ $("#theme").append(theme); // Otázky z tématu: ......
 $(document).ready(function () {
     setTimeout(() => {
         $("#mainCircuit").fadeIn(1500);
-        console.log("yeis");
         loadingScreen.fadeOut();
         next();
     }, 1000)
