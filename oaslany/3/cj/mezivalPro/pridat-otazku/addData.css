@@ -12,6 +12,18 @@
     color: #e6e6e6;
     font-family: comfortaa;
 }
+#thankYou{
+    margin-top: 2em;
+    position: fixed;
+    width: 98%;
+    height: 8em;
+    max-height: 112px;
+    background-color: rgba(64, 64, 64, 0.95);
+    z-index: 5;
+    text-align: center;
+    top: -10em;
+    left: 0em;
+}
 @media only screen and (max-width: 800px){
     #header{
         display: none
@@ -72,7 +84,7 @@
     color: #3db1d1;
 }
 #labelC{
-    color: #dfa50b
+    color: #dfa50b;
 }
 #labelD{
     color: #7c5d97;

@@ -3,6 +3,14 @@ const theme = "Meziválečná próza"; // otázky z tématu:
 
 $("#questionLabel").append(theme);
 
+let checkerForOk = location.hash;
+function thx(){
+    $("#thankYou").show();
+    $("#thankYou").animate({top: "2em"}, "slow");
+}
+
+// if there is hash --> triffer function 
+
 // $(document).keydown(function (event) {
 //     if (event.keyCode == 123) { // Prevent F12
 //         return false;
@@ -26,6 +34,9 @@ $(document).ready(function () {
     setTimeout(() => {
         $("#mainCircuit").fadeIn(1500);
         loadingScreen.fadeOut();
+        if(checkerForOk == "#ok"){
+            thx();
+        }
     }, 1000)
 
 })

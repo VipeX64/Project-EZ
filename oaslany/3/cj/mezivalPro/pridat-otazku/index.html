@@ -38,30 +38,34 @@
                 <div class="col-md-3 col-sm-12" id="logo"></div>
                 <div class="col-md-9 col-sm-12" id="whiteSpace"></div>
             </div>
+            <div id="thankYou">
+                <h2>Díky za pomoc!</h2>
+                <button class="btn btn-default" onclick="document.location.href='./'">Přidat další otázku?</button>
+            </div>
             <div class="col-sm-12 container">
 
                 <div id="modalForm">
-                    <form action="getData.php" method="post">
+                    <form action="./" method="post">
                         <div class="form-group">
                             <label for="questionInput" id="questionLabel">Otázka na téma:</br>
                             </label>
-                            <input class="form-control" id="questionInput" placeholder="...otázka">
+                            <input class="form-control" id="questionInput" name="questionInput" placeholder="...otázka">
                         </div>
                         <div class="form-group">
                             <label for="answerA" id="labelA">Odpověď A:</label>
-                            <input type="text" class="form-control" id="answerA" placeholder="..odpověď">
+                            <input type="text" class="form-control" name="answerA" id="answerA" placeholder="..odpověď">
                             <!-- vstup pro odpověď A -->
 
                             <label for="answerB" id="labelB">Odpověď B:</label>
-                            <input type="text" class="form-control" id="answerB" placeholder="..odpověď">
+                            <input type="text" class="form-control" name="answerB" id="answerB" placeholder="..odpověď">
                             <!-- vstup pro odpověď B -->
 
                             <label for="answerC" id="labelC">Odpověď C:</label>
-                            <input type="text" class="form-control" id="answerC" placeholder="..odpověď">
+                            <input type="text" class="form-control" name="answerC" id="answerC" placeholder="..odpověď">
                             <!-- vstup pro odpověď C -->
 
                             <label for="answerD" id="labelD">Odpověď D:</label>
-                            <input type="text" class="form-control" id="answerD" placeholder="..odpověď">
+                            <input type="text" class="form-control" name="answerD" id="answerD" placeholder="..odpověď">
                             <!-- vstup pro odpověď D -->
 
                             <label for="correctRank" id="labelRank">Kolikátá otázka je správná?</label>

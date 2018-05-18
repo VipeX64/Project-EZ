@@ -1,12 +1,11 @@
 #mainCircuit{
-    background-image: url(../../../../packages/img/black1.jpg);
-    background-size: contain;
-    height: 1000px;
+    background-image: url(../../../../packages/img/background.jpg);
+    background-size: 100%;
+    height: 900px;
     color: #e6e6e6;
 }
 body{
     overflow-x: hidden;
-    overflow-y: hidden;
 }
 #header .iconBox{ 
     position: static;
@@ -28,17 +27,19 @@ body{
     font-family: comfortaa;
     margin-top: 1%; 
     position: static;
+    color: #1e1e1e;
 }
 #qH3{
     padding: 5px;
     padding-top: 30px;
-    border-bottom: 1px double #e6e6e6;
+    border-bottom: 1px double #1e1e1e;
     font-family: comfortaa;
+    color: #1e1e1e;
 }
 .yesOrNo{
-    background-image: url(../../../../packages/img/button.jpg);
+    opacity: 0.8;
     width: 100%;
-    margin: 4% 1.5%;
+    margin: 4% 0.5%;
     margin-bottom: 2.5%;
     height: 100px;
     background-size: 100%;
@@ -47,7 +48,39 @@ body{
     font-size: 2em;
     font-family: comfortaa;
     font-weight: 900;
-    text-shadow: black 2px 0px;
+    text-shadow: white 0px 0px 20px;
+}
+#a{
+    background-color: #e7314b; 
+}
+#b{
+    background-color: #3db1d1;
+}
+#c{
+    background-color: #dfa50b;
+}
+#d{
+    background-color: #7c5d97;;
+}
+#colA{
+    background-image: url(../../../../packages/img/a.jpg);
+    background-size: 100%;
+    border:solid black 2px;
+}
+#colB{
+    background-image: url(../../../../packages/img/b.jpg);
+    background-size: 100%;
+    border:solid black 2px;
+}
+#colC{
+    background-image: url(../../../../packages/img/c.jpg);
+    background-size: 100%;
+    border:solid black 2px;
+}
+#colD{
+    background-image: url(../../../../packages/img/d.jpg);
+    background-size: 100%;
+    border:solid black 2px;
 }
 .modal-body{
     color: black;
@@ -85,6 +118,11 @@ body{
 #questionHere{
     height: 200px;
 }
+@media only screen and (max-width: 800px){
+    #questionHere{
+        height: 0px;
+    }
+}
 #end{
     display: none; 
     padding-top: 1em;
@@ -98,7 +136,8 @@ body{
     font-size: 2.5em;
     color: whitesmoke;
     line-height: 3em;
-    text-align: right;
+    text-align: center;
+    width: 90%;
 
 }
 #endFade{
