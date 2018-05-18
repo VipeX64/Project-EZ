@@ -8,7 +8,8 @@ const correctAudio = new Audio("../../../../packages/audio/RightSound.mp3");
 const wrongAudio = new Audio("../../../../packages/audio/WrongSound.mp3");
 
 //databáze všech otázek {question:"",a:"",b:"",c:",d:"",corr:,used:false}
-let questionNumber = Math.floor(Math.random() * database.length);// číslo náhodně zvolené otázky
+let questionNumber;
+rollRandomQ();  // číslo náhodně zvolené otázky
 const ender = document.getElementById("end");
 const enderHelp = document.getElementById("endFade");
 let h3 = document.getElementById("qH3");
@@ -27,9 +28,10 @@ function detectCorr() {  ///////detekuje část elementu, podle korektní odpov�
 
 function rollRandomQ() {  //roll random otázky
     questionNumber = Math.floor(Math.random() * database.length);
+    database[questionNumber].used = (database[questionNumber].used === "false" || database[questionNumber].used === false) ? false : true;  
 }
 
-function chooseQ() { // v případě, že byla otázky již použita, najdi jinou + 
+function chooseQ() { // v případě, že byla otázky již použita, najdi jinou +
     while (database[questionNumber].used) {
         rollRandomQ();
     }
