@@ -120,7 +120,7 @@ body{
     top: 0;
     left: 0;
     position: absolute;
-    background-color: #333333;
+    background-image: url(../../../../packages/img/background.jpg);
     width: -webkit-fill-available;
     height: -webkit-fill-available;
     z-index: -1;

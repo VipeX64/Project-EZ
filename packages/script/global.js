@@ -135,5 +135,6 @@ function renderAns(x) {
     }
 }
 function renderPercentage() {
-    return correctAnswer / thQuestion * 100;
+    var num = correctAnswer / thQuestion * 100;
+    return num.toFixed(2);
 }
