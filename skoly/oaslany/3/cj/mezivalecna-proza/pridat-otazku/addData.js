@@ -11,16 +11,16 @@ function thx(){
 
 // if there is hash --> triffer function 
 
-// $(document).keydown(function (event) {
-//     if (event.keyCode == 123) { // Prevent F12
-//         return false;
-//     } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) { // Prevent Ctrl+Shift+I        
-//         return false;
-//     }
-// });
-// $(document).on("contextmenu", function (e) {        
-//     e.preventDefault();
-// });
+ $(document).keydown(function (event) {
+     if (event.keyCode == 123) { // Prevent F12
+         return false;
+     } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) { // Prevent Ctrl+Shift+I        
+         return false;
+     }
+ });
+ $(document).on("contextmenu", function (e) {        
+     e.preventDefault();
+ });
 
 // if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 //     $("#header").css("height","0em");
