@@ -24,7 +24,8 @@ const database = [
     {questionInput:"Karel Poláček napsal román Muži v ofsajdu, charakterizujte dílo.",answerA:"Humoristická próza o venkovských lázních",answerB:"Vyprávění padlých vojáků 1. sv. války",answerC:"Humoristická próza o fanoušcích fotbalu",answerD:"Společenská kritika a satira",correctRank:3,used:false},
     {questionInput:"Karel Poláček napsal které z těchto děl?",answerA:"Bylo nás pět",answerB:"Továrna na absolutno",answerC:"Cirkus Humberto",answerD:"Petrolejové lampy",correctRank:1,used:false},
     {questionInput:"Kterou z vybraných možností Eduard Bass nepsal?",answerA:"Fejetony",answerB:"Reportáže",answerC:"Básně",answerD:"Sloupky",correctRank:3,used:false},
-    {questionInput:"",answerA:"",answerB:"",answerC:"",answerD:"",correctRank:,used:false}
+    {questionInput:"Jak se nazývá 1. díl pentalogie od Karla Poláčka?",answerA:"Nový svět",answerB:"Okresní město",answerC:"Malá ves",answerD:"Válka",correctRank:2,used:false},
+    {questionInput:"Mezi nejznámější díla Eduarda Basse patří Klapzubova jedenáctka a Cirkus Humberto, jaké další dílo napsal?",answerA:"Povídání o pejskovi a kočičce",answerB:"Dekameron",answerC:"Matka",answerD:"Lidé z maringotek",correctRank:4,used:false}
 ];
 // {questionInput:"",answerA:"",answerB:"",answerC:"",answerD:"",correctRank:,used:false} šablona pro otázky
 
