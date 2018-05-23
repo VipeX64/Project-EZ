@@ -1,0 +1,31 @@
+body{
+    background-image: url(../img/bcgr1.jpg);
+    background-size: 100%;
+}
+header {
+    border-bottom: black 2px double;
+    width: 100%;
+    font-family: comfortaa;
+}
+header a{
+    text-decoration: none;
+    color: #232323
+}
+header a:hover{
+    text-decoration: underline;
+}
+nav a{
+    font-family: comfortaa;
+    border: 2px solid #2a2a2a;
+    padding: 10px;
+    background-color: rgba(64, 64, 64, 0.1);
+    background-position-x: right;
+    color: rgb(27, 27, 129);
+}
+nav a:hover{
+    background-color: rgba(64, 64, 64, 0.25);
+    color: rgb(13, 13, 63);
+}
+a {
+    padding: 10px;
+}

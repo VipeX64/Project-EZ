@@ -2,14 +2,14 @@
 <html>
 
 <head>
-    <script src="../../../../packages/bootstrap/js/jquery-3.2.1.min.js"></script>
-    <script defer src="../../../../packages/fontawesome/svg-with-js/js/fontawesome-all.js"></script>
+    <script src="../../../../../packages/bootstrap/js/jquery-3.2.1.min.js"></script>
+    <script defer src="../../../../../packages/fontawesome/svg-with-js/js/fontawesome-all.js"></script>
     <meta charset="UTF-8">
     <title id="title"></title>
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
     <link rel="stylesheet" href="meziPro.css">
-    <link rel="stylesheet" href="../../../../packages/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../../../packages\fontawesome\web-fonts-with-css\css\fontawesome.min.css">
+    <link rel="stylesheet" href="../../../../../packages/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../../packages\fontawesome\web-fonts-with-css\css\fontawesome.min.css">
 </head>
 
 <body>
@@ -30,7 +30,9 @@
                 <p>Dobrá práce!</p>
                 <p>Úspěšně jsi zvládl projít tímto testem.</p>
                 <p id="score">Tento test jsi zvládl/a na </p>
-                <button class="btn btn-default">Znovu?</button>
+                <button class="btn btn-primary" id="repeat" onclick="window.location.reload()">Znovu
+                    <i class="fas fa-redo-alt" id="rotator"></i>
+                </button>
             </div>
 
         </div>
@@ -40,7 +42,7 @@
         <div class="container-fluid">
             <div id="header" class="row">
                 <div class="col-md-1 col-sm-1 iconBox">
-                    <i id="back" class="far fa-caret-square-left icons"></i>
+                    <i id="back" class="far fa-caret-square-left icons" data-toggle="modal" data-target="#youSure"></i>
                 </div>
                 <div class="col-md-10 col-sm-10" id="theme">Otázky z tématu:
                     <br>
@@ -49,7 +51,7 @@
                     <i id="options" class="fas fa-bars icons" data-toggle="modal" data-target="#verdict"></i>
                 </div>
             </div>
-            <div class="container">
+            <div class="container" id="containerMine">
                 <div id="quizSection">
                     <div id="questionHere">
                         <h3 id="qH3">QUESTION HERE</h3>
@@ -78,9 +80,11 @@
 
                         </div>
                     </div>
-                    <div id="next" onclick="next()">DALŠÍ <i class="fas fa-arrow-circle-right"></i></div>
+                    <div id="next" onclick="next()">DALŠÍ
+                        <i class="fas fa-arrow-circle-right"></i>
+                    </div>
                     <div id="verdict" class="modal fade" role="dialog">
-                         <div class="modal-dialog">
+                        <div class="modal-dialog">
                             <!-- OPTIONS menu -->
                             <div class="modal-content">
                                 <div class="modal-body">
@@ -109,14 +113,25 @@
                         </div> -->
                         <!-- verdict menu -->
                     </div>
+                    <div id="youSure" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <!-- OPTIONS menu -->
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    Opravdu se chceš vrátit zpátky?
+                                    <a href="../">Ano chci!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     </div>
-    <script src="../../../../packages/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../../../packages/bootstrap/js/bootstrap.min.js"></script>
     <script src="meziPro.js"></script>
-    <script src="../../../../packages/script/global.js"></script>
+    <script src="../../../../../packages/script/global.js"></script>
 </body>
 
 </html>
