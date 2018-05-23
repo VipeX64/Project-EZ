@@ -29,7 +29,7 @@ function checkWidth() { // každou půlsekundu to zjistí, zda se nezměnila vel
         mobile = currentWidth < 800 ? true : false;
         correctFont();
     }
-    setInterval(function () {
+    setTimeout(function () {
         checkWidth();
     }, 500);
 }
