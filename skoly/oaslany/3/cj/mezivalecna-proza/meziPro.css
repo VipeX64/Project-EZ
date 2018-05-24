@@ -2,26 +2,39 @@
     background-image: url(../../../../../packages/img/background.jpg);
     background-size: 100%;
     background-repeat: repeat;
-    height: -webkit-fill-available;
+    height: 100%;
     color: #e6e6e6;
 }
 body{
     overflow-x: hidden;
+    user-select:none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 #header .iconBox{ 
     position: static;
 }
 #back,#options{
-    width: 5em;
-    height: 5em;
-    color: #e6e6e6;
+    width: 9em;
+    height: 9em;
+    color: #000;
     font-family: comfortaa;
     margin-top: 1em;
 }
 #options{
     padding: 8px;
-    border: 6px solid #e6e6e6;
+    border: 6px solid #000;
+    float: right;
 }
+#progressQuestionBar{
+    text-align: center;
+    line-height: 50px;
+    font-size: 30px;
+    font-family: comfortaa;
+    color: black;
+}
+
 #theme{
     font-size: 4em;
     text-align: center;
@@ -36,6 +49,8 @@ body{
     border-bottom: 1px double #1e1e1e;
     font-family: comfortaa;
     color: #1e1e1e;
+    box-shadow: #008B8B 0px 3px;
+    font-size: 2em;
 }
 .yesOrNo{
     opacity: 0.8;
@@ -114,7 +129,7 @@ body{
 }
 @media (min-width: 992px){
     #containerMine{
-        width: 1000px;
+        width: 1200px;
     }
     .yesOrNo{
         font-size: 2em;
@@ -130,7 +145,7 @@ body{
     z-index: -1;
 }
 #questionHere{
-    height: 200px;
+    height: 250px;
 }
 @media only screen and (max-width: 800px){
     #questionHere{
@@ -174,17 +189,48 @@ body{
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
 }
+#progressor{
+    margin-top: 21px;
+    border: 2px solid #008B8B;
+    height: 50px;
+    border-radius: 25px;
+    background-color: rgba(58, 205, 60,0.3);
+}
 #next{
     width: 6em;
     height: 2em;
     float: right;
-    margin-top: 25px;
+    margin-top: 10px;
     font-size: 3em;
     line-height: 2em;
     text-align: center;
     font-family: comfortaa;
-    display: none;
+    visibility: visible;
     color: black;
+}
+#modalBody{
+    margin-top: 2em;
+    position: fixed;
+    width: 90%;
+    height: 7em;
+    background-color: rgba(180, 180, 180, 0.95);
+    z-index: 5;
+    text-align: center;
+    left: 0em;
+    margin: 5%;
+    border-radius: 40px;
+}
+#muteMusic{
+    background-image: url(../../../../../packages/img/volume_on.png);
+    background-size: contain;
+    height: 1.5em;
+    width: 1.5em;
+    float: right;
+}
+@media (min-width: 768px){
+    .modal-dialog {
+        width: 100%;
+    }
 }
 /* The switch - the box around the slider */
 .switch {
@@ -205,29 +251,31 @@ body{
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #2196F3;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 .slider:before {
+    
+  background-image: url(../../../../../packages/img/volume_on.png);
+  background-size: contain;
   position: absolute;
   content: "";
   height: 26px;
   width: 26px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #ccc;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+  box-shadow: 0 0 1px #ccc;
 }
 
 input:checked + .slider:before {

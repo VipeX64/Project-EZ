@@ -5,6 +5,7 @@
     <script src="../../../../../packages/bootstrap/js/jquery-3.2.1.min.js"></script>
     <script defer src="../../../../../packages/fontawesome/svg-with-js/js/fontawesome-all.js"></script>
     <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/ico" href="../../../../../packages/img/favicon.ico" />
     <title id="title"></title>
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
     <link rel="stylesheet" href="meziPro.css">
@@ -28,8 +29,8 @@
         <div class="container">
             <div class="col-md-12">
                 <p>Dobrá práce!</p>
-                <p>Úspěšně jsi zvládl projít tímto testem.</p>
-                <p id="score">Tento test jsi zvládl/a na </p>
+                <p>Úspěšně jsi zvládl/a tímto testem.</p>
+                <p id="score">Dokázal/a jsi správně odpovědět na </p>
                 <button class="btn btn-primary" id="repeat" onclick="window.location.reload()">Znovu
                     <i class="fas fa-redo-alt" id="rotator"></i>
                 </button>
@@ -41,13 +42,13 @@
     <div id="mainCircuit">
         <div class="container-fluid">
             <div id="header" class="row">
-                <div class="col-md-1 col-sm-1 iconBox">
+                <div class="col-md-2 col-sm-2 iconBox">
                     <i id="back" class="far fa-caret-square-left icons" data-toggle="modal" data-target="#youSure"></i>
                 </div>
-                <div class="col-md-10 col-sm-10" id="theme">Otázky z tématu:
+                <div class="col-md-8 col-sm-8" id="theme">Otázky z tématu:
                     <br>
                 </div>
-                <div class="col-md-1 col-sm-1 iconBox">
+                <div class="col-md-2 col-sm-2 iconBox">
                     <i id="options" class="fas fa-bars icons" data-toggle="modal" data-target="#verdict"></i>
                 </div>
             </div>
@@ -78,60 +79,75 @@
                             </div>
 
 
+                            <div class="col-sm-12 col-md-12">
+                                <div class="progress" id="progressor">
+                                    <div id="progressQuestionBar" class="progress-bar progress-bar-success progress-bar-striped progressQuestionBar" role="progressbar"
+                                        aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">xd</div>
+                                </div>
+                            </div>
+
+
                         </div>
                     </div>
                     <div id="next" onclick="next()">DALŠÍ
                         <i class="fas fa-arrow-circle-right"></i>
                     </div>
-                    <div id="verdict" class="modal fade" role="dialog">
-                        <div class="modal-dialog">
-                            <!-- OPTIONS menu -->
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    ..zatím nic
-                                    <!-- <p>Vypnout zvuky?&nbsp;&nbsp;
-                                        <label class="switch">
-                                            <input type="checkbox" id="quickMode">
-                                            <span class="slider round"></span>
-                                        </label>
-                                    </p>
-                                    <p id="totalQuestions">Celkový počet otázek: </p>
-                                    <p id="perCorrect">Procento správných odpovědí: </p>
-                                    <p id="exitGame">Odhlásit se a zavřít okno</p> -->
 
-                                </div>
-                            </div>
-                        </div>
-                        <!-- OPTIONS menu -->
-                        <!-- verdict menu -->
-                        <!-- <div class="modal-dialog">
+
+
+
+                    <!-- OPTIONS menu -->
+                    <!-- verdict menu -->
+                    <!-- <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-body">
                                     verdikt  + co se napíše po kliknutí butttonu 
                                 </div>
                             </div>
                         </div> -->
-                        <!-- verdict menu -->
-                    </div>
-                    <div id="youSure" class="modal fade" role="dialog">
-                        <div class="modal-dialog">
-                            <!-- OPTIONS menu -->
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    Opravdu se chceš vrátit zpátky?
-                                    <a href="../">Ano chci!</a>
-                                </div>
+                    <!-- verdict menu -->
+                </div>
+                <div id="youSure" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <!-- OPTIONS menu -->
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                Opravdu se chceš vrátit zpátky?
+                                <a href="../" style="font-weight: 900">Ano chci!</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
+
     </div>
-    <script src="../../../../../packages/bootstrap/js/bootstrap.min.js"></script>
-    <script src="meziPro.js"></script>
-    <script src="../../../../../packages/script/global.js"></script>
+    <div id="verdict" class="modal fade" role="dialog">
+
+        <!-- OPTIONS menu -->
+        <div class="modal-content">
+            <div class="modal-body" id="modalBody" style="
+                font-size: 3em;">
+                <!-- <p>Vypnout zvuky?&nbsp;&nbsp;
+                        <label class="switch">
+                            <input type="checkbox" id="quickMode">
+                            <span class="slider round"></span>
+                        </label>
+                    </p> -->
+                <div id="muteMusic" onclick="muteUnmute()"></div>
+                <p style="text-decoration: underline; text-align: center">N A S T A V E N Í</p>
+                <br>
+
+                <p id="totalQuestions">Celkový počet otázek: </p>
+                ..work in progress
+
+            </div>
+        </div>
+        <script src="../../../../../packages/bootstrap/js/bootstrap.min.js"></script>
+        <script src="meziPro.js"></script>
+        <script src="../../../../../packages/script/global.js"></script>
 </body>
 
 </html>

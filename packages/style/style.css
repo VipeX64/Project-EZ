@@ -1,6 +1,10 @@
 body{
     background-image: url(../img/bcgr1.jpg);
     background-size: 100%;
+    user-select:none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 header {
     border-bottom: black 2px double;

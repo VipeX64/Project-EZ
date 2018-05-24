@@ -5,6 +5,8 @@ let correctAnswer = 0;
 let canAppend = true;
 let startWidth = window.screen.availWidth;
 let mobile;
+let currentProgress = 0;
+
 if (startWidth < 800) {
     mobile = true;
 } else if (startWidth >= 800) {
@@ -20,6 +22,21 @@ rollRandomQ();  // číslo náhodně zvolené otázky
 const ender = document.getElementById("end");
 const enderHelp = document.getElementById("endFade");
 let h3 = document.getElementById("qH3");
+
+function muteUnmute(){
+    if(!correctAudio.muted){
+        muted = true; // vypne se zvuk
+        correctAudio.muted = true;
+        wrongAudio.muted = true;
+        $("#muteMusic").css("background-image","url(../../../../../packages/img/volume_off.png)")
+    } else if (correctAudio.muted){
+        muted = false; // zapne se zvuk
+        correctAudio.muted = false;
+        wrongAudio.muted = false;
+        $("#muteMusic").css("background-image","url(../../../../../packages/img/volume_on.png)")
+    }
+
+}
 
 function checkWidth() { // každou půlsekundu to zjistí, zda se nezměnila velikost stránky
     let currentWidth = window.screen.availWidth;
@@ -60,16 +77,17 @@ function chooseQ() { // v případě, že byla otázky již použita, najdi jino
 }
 
 function next() { //Další otázka
+    setBarSize();
     if (thQuestion >= database.length) {
         $("#end").css("display", "block");
         if (canAppend) {
             $("#score").append(renderPercentage() + "%");
             canAppend = false;
         } else {
-            console.log("nothing");
+            //nothing
         }
     } else {
-        $("#next").css("display", "none");
+        $("#next").css("visibility","hidden");
         $(".yesOrNo").css("color", "black");
         canPlay = true;
         chooseQ();
@@ -80,7 +98,7 @@ function next() { //Další otázka
 
 function renderAns(x) {
     if (!canPlay) {
-        console.log("nothing");
+        // console.log("nothing");
     } else if (x == a && database[questionNumber].correctRank == 1) {
         scotWork();
     } else if (x == b && database[questionNumber].correctRank == 2) {
@@ -103,26 +121,37 @@ function renderAns(x) {
         wrongAudio.play();
         canPlay = false;
         database[questionNumber].used = true;
-        $("#next").css("display", "block");
+        $("#next").css("visibility","visible");
         thQuestion += 1;
-        console.log(thQuestion);
+        // console.log(thQuestion);
     }
 }
 function renderPercentage() {
     var num = correctAnswer / thQuestion * 100;
     return num.toFixed(2);
 }
+function setBarSize() {
+    portion = (100 / database.length).toFixed(2);
+    console.log(portion);
+    console.log(currentProgress);
+    if(currentProgress >99.1){
+        currentProgress = 100;
+        $(".progressQuestionBar").addClass("active");
+    }
+    $("#progressQuestionBar").css("width", currentProgress + "%").attr("aria-valuenow", currentProgress).text(Number(currentProgress).toFixed(2) + "%");
+    currentProgress = Number(currentProgress) + Number(portion);
+};
 
 function scotWork() {
     detectCorr().css("color", "green");
     correctAudio.play();
     canPlay = false;
     database[questionNumber].used = true;
-    $("#next").css("display", "block");
+    $("#next").css("visibility","visible");
     thQuestion += 1;
     correctAnswer += 1;
-    console.log(thQuestion);
-    console.log(correctAnswer + "points");
+    // console.log(thQuestion);
+    // console.log(correctAnswer + "points");
 }
 $(document).keydown(function (event) {
     if (event.keyCode == 123) { // Prevent F12
@@ -131,12 +160,12 @@ $(document).keydown(function (event) {
         return false;
     }
 });
-$(document).on("contextmenu", function (e) {        
+$(document).on("contextmenu", function (e) {
     e.preventDefault();
 });
 function correctFont() {
-    console.log("it rendered");
-    console.log(mobile);
+    // console.log("it rendered");
+    // console.log(mobile);
     let currentBlock;
     let answer;
     let depends;
@@ -159,8 +188,10 @@ function correctFont() {
         } else if (answer.length <= 35) {
             currentBlock.css("font-size", "2em");
         } else {
-            console.log("weird, but nobody came");
+            // console.log("weird, but nobody came");
         }
-
+        if (mobile) {
+            $("#qH3").css("font-size", "3em");
+        }
     }
 }
