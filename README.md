@@ -47,7 +47,9 @@ Detailed changes for each release are documented in the [release notes](https://
 
 # Licence
 
-Project **EZMAT** was and still is under the supervision of Thomas Lacina, passionate czech web designer, developer and programmer.
+Project **EZMAT** was and still is under the supervision of Thomas Lacina, passionate czech web designer, developer and programmer. 
+
+Copyright © 2018 Omnifio, Inc.
 
 # Special thanks
 I'd like to give out a special thanks to all of my supporters throughout the years (Daniel Garcia Fifoot, Marianne Stavik Eggen, Michael Neuwirth). Very, very special thanks to one of my biggest supporters Philip Faktor, former director of Omnifio, Inc., who has been an incredible support throughout the last year. This project wouldn't even be possible without his help. And of course big thanks to my family, you've been supporting me since the day I was born and I love you so much for that!  
