@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="../../../../../packages/bootstrap/js/jquery-3.2.1.min.js"></script>
+    <script defer src="../../../../../packages/fontawesome/svg-with-js/js/fontawesome-all.js"></script>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/ico" href="../../../../../packages/img/favicon.ico" />
+    <title id="title"></title>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../../../../packages/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../../packages\fontawesome\web-fonts-with-css\css\fontawesome.min.css">
+</head>
+
+<body>
+
+    <div id="endFade"></div>
+    <div id="loadingScreen" class="container">
+        <div id="loader">
+            <p>Načítá se..</p>
+            <div class="progress">
+                <div id="progressBar" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" style="width:100%"></div>
+            </div>
+        </div>
+    </div>
+    <div id="constantScreen"></div>
+    <div id="end">
+        <div class="container">
+            <div class="col-md-12">
+                <p>Dobrá práce!</p>
+                <p>Úspěšně jsi zvládl/a projít tímto testem.</p>
+                <p id="score">Dokázal/a jsi správně odpovědět na </p>
+                <button class="btn btn-primary" id="repeat" onclick="window.location.reload()">Znovu
+                    <i class="fas fa-redo-alt" id="rotator"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <div id="endFade"></div>
+    <div id="mainCircuit">
+        <div class="container-fluid">
+            <div id="header" class="row">
+                <div class="col-md-2 col-sm-2 iconBox">
+                    <i id="back" class="far fa-caret-square-left icons" data-toggle="modal" data-target="#youSure"></i>
+                </div>
+                <div class="col-md-8 col-sm-8" id="theme">Otázky z tématu:
+                    <br>
+                </div>
+                <div class="col-md-2 col-sm-2 iconBox">
+                    <i id="options" class="fas fa-bars icons" data-toggle="modal" data-target="#verdict"></i>
+                </div>
+            </div>
+            <div class="container" id="containerMine">
+                <div id="quizSection">
+                    <div id="questionHere">
+                        <h3 id="qH3">QUESTION HERE</h3>
+                        <!-- <h5 id="qH5">Otázka č.</h5>
+                        <h5 id="qNum"></h5> -->
+                    </div>
+                    <div id="fourBtns">
+                        <div id="firstTwo">
+                            <div class="col-md-6" id="colA">
+                                <button id="a" class="yesOrNo" onclick="renderAns(a)">Možnost A</button>
+                            </div>
+                            <div class="col-md-6" id="colB">
+                                <button id="b" class="yesOrNo" onclick="renderAns(b)">Možnost B</button>
+                            </div>
+
+
+                        </div>
+                        <div id="secondTwo">
+                            <div class="col-md-6" id="colC">
+                                <button id="c" class="yesOrNo" onclick="renderAns(c)">Možnost C</button>
+                            </div>
+                            <div class="col-md-6" id="colD">
+                                <button id="d" class="yesOrNo" onclick="renderAns(d)">Možnost D</button>
+                            </div>
+
+
+                            <div class="col-sm-12 col-md-12">
+                                <div class="progress" id="progressor">
+                                    <div id="progressQuestionBar" class="progress-bar progress-bar-success progress-bar-striped progressQuestionBar" role="progressbar"
+                                        aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%"></div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div id="next" onclick="next()">DALŠÍ
+                        <i class="fas fa-arrow-circle-right"></i>
+                    </div>
+
+
+
+
+                    <!-- OPTIONS menu -->
+                    <!-- verdict menu -->
+                    <!-- <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    verdikt  + co se napíše po kliknutí butttonu 
+                                </div>
+                            </div>
+                        </div> -->
+                    <!-- verdict menu -->
+                </div>
+                <div id="youSure" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <!-- OPTIONS menu -->
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                Opravdu se chceš vrátit zpátky?
+                                <a href="../" style="font-weight: 900">Ano chci!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+    <div id="verdict" class="modal fade" role="dialog">
+
+        <!-- OPTIONS menu -->
+        <div class="modal-content">
+            <div class="modal-body" id="modalBody" style="
+                font-size: 3em;">
+                <!-- <p>Vypnout zvuky?&nbsp;&nbsp;
+                        <label class="switch">
+                            <input type="checkbox" id="quickMode">
+                            <span class="slider round"></span>
+                        </label>
+                    </p> -->
+                <div id="muteMusic" onclick="muteUnmute()"></div>
+                <p style="text-decoration: underline; text-align: center">N A S T A V E N Í</p>
+                <br>
+
+                <p id="totalQuestions">Celkový počet otázek: </p>
+                ..work in progress
+
+            </div>
+        </div>
+        <script src="../../../../../packages/bootstrap/js/bootstrap.min.js"></script>
+        <script src="script.js"></script>
+        <script src="../../../../../packages/script/global.js"></script>
+</body>
+
+</html>
