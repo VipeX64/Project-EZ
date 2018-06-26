@@ -138,7 +138,8 @@ function setBarSize() {
         currentProgress = 100;
         $(".progressQuestionBar").addClass("active");
     }
-    $("#progressQuestionBar").css("width", currentProgress + "%").attr("aria-valuenow", currentProgress).text(Number(currentProgress).toFixed(2) + "%");
+    $("#progressQuestionBar").css("width", currentProgress + "%").attr("aria-valuenow", currentProgress);
+    // $("#progressQuestionBar").css("width", currentProgress + "%").attr("aria-valuenow", currentProgress).text(Number(currentProgress).toFixed(2) + "%");
     currentProgress = Number(currentProgress) + Number(portion);
 };
 
