@@ -1,9 +1,24 @@
 body{
     color: #2F7E92;
 }
+@media (max-width: 992px){
+    #secondDiv {
+        margin-top: 58px;
+    }
+    .navbar div{
+        line-height: 58px;
+        font-size: 32px;
+    }
+}
+@media (min-width: 992px){
+    #eightCols {
+        margin-top: 3em;
+    }
+}
 #adPlace{
     height: 90px;
     background-color: gray;
+    display: none;
 }
 .navbar{
     margin-top: 1em;
@@ -12,22 +27,30 @@ body{
     font-size: 20px;
     text-align: center;
 }
-.navbar div:nth-child(3){
-    border: none;
-}
 #logo{
     background-image: url(../packages/img/logo.png);
-    background-size: 80%;
+    background-size: contain;
     background-repeat: no-repeat;
-    height: 30em;
-    top: 6em;
-    background-position-y: -19em;
-    background-position-x: 8em;
-    z-index: 10;
-    position: absolute;
-    width: 95%;
+    height: 10em;
+    margin-top: 1em;
 }
 .navbar div{
     height: 58px;
     border: 1px solid black;
+}
+.secondDiv{
+    border: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+#video{
+    height: 250px;
+    background-color: gray;
+}
+#goalsList, #tutorial{
+    height: 250px;
+}
+#icons{
+    margin-top: 5em;
+
 }
